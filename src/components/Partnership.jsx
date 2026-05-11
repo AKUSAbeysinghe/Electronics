@@ -5,7 +5,7 @@ const PartnerCTA = () => {
     <section className="bg-[#2E7D56] py-20 px-8 rounded-3xl mx-4 my-16 text-center text-white">
       <div className="max-w-2xl mx-auto">
         
-        {/* Heading */}
+        {/* Heading */}  
         <h2 className="text-5xl font-semibold mb-6">
           Become a Vivara partner.
         </h2>

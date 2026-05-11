@@ -171,23 +171,28 @@ const WhyChoosePharmacy = () => {
   );
 };
 
+
+
 const CallToAction = () => (
-  <section className="bg-[#2E7D56] py-24 px-6 text-white text-center">
-    <div className="max-w-4xl mx-auto">
-      <h2 className="text-5xl font-bold">Need Help With Your Health?</h2>
-      <p className="mt-6 text-lg text-emerald-100">Refill prescriptions or consult a pharmacist today.</p>
-      <div className="mt-10 flex flex-wrap justify-center gap-5">
-        <a href="/refill" className="px-10 py-4 bg-white text-[#2E7D56] rounded-xl font-semibold hover:scale-105 transition">
+  <section className="py-24 px-6 bg-white">
+    <div className="max-w-6xl mx-auto">
+      <div className="rounded-[32px] bg-[#2E7D56] px-10 md:px-20 py-20 text-center text-white shadow-xl">
+        <h2 className="text-5xl font-bold">Need Help With Your Health?</h2>
+        <p className="mt-6 text-lg text-emerald-100 max-w-2xl mx-auto">
+        Refill prescriptions or consult a pharmacist today.
+        </p>
+        <div className="mt-10 flex flex-wrap justify-center gap-5">
+          <a href="/shop-fitness" className="px-10 py-4 bg-white text-[#2E7D56] rounded-xl font-semibold hover:scale-105 transition">
           Refill Prescription
-        </a>
-        <a href="/consultation" className="px-10 py-4 border-2 border-white rounded-xl font-semibold hover:bg-white hover:text-[#2E7D56] transition">
+          </a>
+          <a href="/personal-training" className="px-10 py-4 border-2 border-white rounded-xl font-semibold hover:bg-white hover:text-[#2E7D56] transition">
           Book Consultation
-        </a>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 );
-
 /* ================= MAIN ================= */
 const Pharmacy = () => {
   const [products, setProducts] = useState([]);

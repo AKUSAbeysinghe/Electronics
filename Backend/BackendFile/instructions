@@ -1,0 +1,30 @@
+C:\xampp\htdocs\pharmacy-project/
+│
+├── api/                          ← All PHP files go here
+│   ├── config.php
+│   ├── get_categories.php
+│   ├── get_subcategories.php
+│   ├── get_products.php
+│   ├── add_product.php
+│   ├── update_product.php
+│   ├── delete_product.php
+│   ├── signup.php
+│   ├── login.php
+│   └── get_user.php
+│
+├── uploads/
+│   └── products/                 ← Images will be saved here
+│
+├── src/                          ← Your React files
+│   ├── pages/
+│   │   ├── Pharmacy.jsx
+│   │   ├── Supplements.jsx
+│   │   ├── Fitness.jsx
+│   │   ├── Signup.jsx
+│   │   ├── Login.jsx
+│   │   └── AdminPanel.jsx
+│   └── ...
+│
+├── index.html
+├── package.json
+└── ...

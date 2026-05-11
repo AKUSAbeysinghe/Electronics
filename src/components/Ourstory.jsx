@@ -10,6 +10,7 @@ const stats = [
 
 const StatsSection = () => {
   return (
+    // <div className="flex flex-wrap justify-between gap-8 py-12 px-8">
     <div className="flex flex-wrap justify-between gap-8 py-12 px-8">
       {stats.map((stat, index) => (
         <div key={index} className="flex items-center gap-4">
