@@ -1,0 +1,81 @@
+import React from 'react';
+
+const FeaturesSection = () => {
+  const features = [
+    {
+      id: 1,
+      title: 'Free Shipping',
+      description: 'On orders over $500',
+      icon: (
+        <svg className="w-5 h-5 text-[#4d61fc]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1h1m6-1v-4a2 2 0 00-2-2h-3V5a1 1 0 00-1-1H3" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 12h7l2 3v4a1 1 0 01-1 1h-3" />
+        </svg>
+      ),
+    },
+    {
+      id: 2,
+      title: '2-Year Warranty',
+      description: 'Full coverage on all products',
+      icon: (
+        <svg className="w-5 h-5 text-[#4d61fc]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+    },
+    {
+      id: 3,
+      title: '30-Day Returns',
+      description: 'No questions asked',
+      icon: (
+        <svg className="w-5 h-5 text-[#4d61fc]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18.5" />
+        </svg>
+      ),
+    },
+    {
+      id: 4,
+      title: 'Fast Delivery',
+      description: 'Same-day in select cities',
+      icon: (
+        <svg className="w-5 h-5 text-[#4d61fc]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+    },
+  ];
+
+  return (
+    <section className="bg-black text-white py-16 px-6 sm:px-12">
+      <div className="max-w-7xl mx-auto">
+        {/* Layout Grid: 1 column on mobile, 2 on tablet, 4 on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((item) => (
+            <div 
+              key={item.id} 
+              className="flex flex-col items-center text-center p-4"
+            >
+              {/* Rounded Dark Icon Wrapper */}
+              <div className="w-12 h-12 flex items-center justify-center rounded-2xl bg-[#080e22] border border-[#16224f]/30 mb-5">
+                {item.icon}
+              </div>
+
+              {/* Title */}
+              <h3 className="text-base font-bold tracking-wide text-white mb-2">
+                {item.title}
+              </h3>
+
+              {/* Sub-description */}
+              <p className="text-xs sm:text-sm text-gray-600 font-medium tracking-normal">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FeaturesSection;
