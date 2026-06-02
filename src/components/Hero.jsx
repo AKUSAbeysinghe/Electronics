@@ -3,94 +3,91 @@ import MainImage from "../assets/Mains/Mains.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen bg-[#030712] text-white flex items-center justify-center px-6 py-12 md:px-16 lg:px-24">
-      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
-        {/* Left Column: Content */}
-        <div className="flex flex-col space-y-6 max-w-xl">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      
+      {/* Background Image with Dark Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={MainImage} 
+          alt="Hero Background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16 text-center lg:text-left">
+        <div className="max-w-2xl mx-auto lg:mx-0">
           
-          {/* Tagline Badge */}
-          <div className="inline-flex items-center space-x-2 bg-[#1e293b]/40 border border-[#4d61fc]/30 rounded-full px-4 py-1.5 w-fit">
-            <svg 
-              className="w-4 h-4 text-[#4d61fc]" 
-              fill="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-            </svg>
-            <span className="text-xs font-medium text-gray-300 tracking-wide">
-              New Arrivals Available
+          {/* Small Announcement */}
+          <div className="inline-flex items-center gap-2 px-6 py-2.5 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full mb-8">
+            <span className="text-[#4d61fc] text-xl">✦</span>
+            <span className="uppercase tracking-[3px] text-sm font-semibold text-white">
+              Limited Time Offer
             </span>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.15]">
-            The Future of <br />
-            <span className="text-[#4d61fc]">Technology</span> Is Here
+          {/* Hero Heading */}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tighter mb-6">
+            NEXT-GEN TECH.<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4d61fc] via-blue-400 to-[#4d61fc]">
+            UNMATCHED
+          </span>
           </h1>
 
-          {/* Subtext */}
-          <p className="text-gray-400 text-base sm:text-lg font-light leading-relaxed">
-            Discover premium electronics curated for the modern lifestyle. 
-            From flagship smartphones to immersive gaming rigs, we bring 
-            innovation to your doorstep.
+          <p className="text-lg sm:text-xl text-gray-300 mb-10 max-w-lg mx-auto lg:mx-0">
+            Premium gadgets engineered for those who live ahead of the curve. 
+            Experience innovation at its finest.
           </p>
 
-          {/* Call to Actions */}
-          <div className="flex flex-wrap gap-4 pt-2">
-            <button className="flex items-center space-x-2 bg-[#4d61fc] hover:bg-[#3b4fd9] text-white font-medium px-6 py-3 rounded-xl transition-all shadow-lg shadow-[#4d61fc]/20">
-              <span>Shop Now</span>
-              <svg 
-                className="w-4 h-4" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2.5" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <button className="group px-10 py-4 bg-white text-black font-semibold rounded-2xl flex items-center justify-center gap-3 hover:bg-gray-100 transition-all text-lg">
+              Shop the Collection
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 group-hover:translate-x-1 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </button>
-            
-            <button className="bg-transparent hover:bg-white/5 border border-gray-800 text-white font-medium px-6 py-3 rounded-xl transition-all">
-              Explore Gaming
+
+            <button className="px-10 py-4 border border-white/60 hover:bg-white/10 text-white font-medium rounded-2xl transition-all text-lg backdrop-blur-sm">
+              Learn More
             </button>
           </div>
 
-          {/* Trust Badges / Footer Info */}
-          <div className="flex items-center space-x-6 pt-6 border-t border-gray-900 text-sm text-gray-400">
-            {/* Reviews */}
-            <div className="flex items-center space-x-1.5">
-              <svg 
-                className="w-4 h-4 text-amber-400 fill-current" 
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-              </svg>
-              <span className="font-bold text-white">4.9</span>
-              <span className="text-gray-500">(12K+ reviews)</span>
-            </div>
-            
-            {/* Divider */}
-            <div className="h-4 w-[1px] bg-gray-800" />
-
-            {/* Shipping */}
+          {/* Stats Bar */}
+          <div className="mt-16 flex flex-wrap justify-center lg:justify-start gap-10 text-left">
             <div>
-              <span>Free shipping over $500</span>
+              <p className="text-4xl font-bold text-white">500+</p>
+              <p className="text-gray-400 text-sm">Premium Products</p>
+            </div>
+            <div>
+              <p className="text-4xl font-bold text-white">98%</p>
+              <p className="text-gray-400 text-sm">Satisfaction Rate</p>
+            </div>
+            <div>
+              <p className="text-4xl font-bold text-white">24h</p>
+              <p className="text-gray-400 text-sm">Delivery in Cities</p>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Right Column: Hero Image Showcase */}
-        <div className="relative aspect-square w-full max-w-lg lg:max-w-none mx-auto rounded-3xl overflow-hidden shadow-2xl group">
-          <img 
-            src={MainImage } // Fallback high-quality tech/retail interior image URL
-            alt="Futuristic Tech Store Showcase" 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          {/* Subtle vignette overlay mimicking the original layout's dark ambiance */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+      {/* Floating Product Highlight */}
+      <div className="hidden xl:block absolute bottom-12 right-12 bg-[#0a0f1c] border border-gray-700 rounded-3xl p-5 shadow-2xl max-w-[240px]">
+        <div className="text-xs uppercase tracking-widest text-gray-400 mb-2">Featured Today</div>
+        <div className="font-semibold text-lg leading-tight">Quantum X Pro Laptop</div>
+        <div className="flex items-center gap-3 mt-4">
+          <span className="text-2xl font-bold">$1,099</span>
+          <span className="text-emerald-400 text-sm font-medium">-8% OFF</span>
         </div>
+      </div>
 
+      {/* Scroll Prompt */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/60 text-xs tracking-widest">
+        SCROLL TO DISCOVER
+        <div className="mt-3 w-5 h-8 border-2 border-white/40 rounded-full flex justify-center">
+          <div className="w-1 h-2 bg-white/70 rounded-full mt-2 animate-bounce" />
+        </div>
       </div>
     </section>
   );

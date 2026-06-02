@@ -1,4 +1,7 @@
 import React from 'react';
+import X from "../../assets/Collections/BestSallers/X.jpg";
+import Blade from "../../assets/Collections/BestSallers/Blade.jpg";
+import HeadPhone from "../../assets/Collections/BestSallers/HeadPhone.jpg";
 
 const ProductGridThreeColumn = () => {
   const products = [
@@ -6,7 +9,7 @@ const ProductGridThreeColumn = () => {
       id: 1,
       brand: 'NOVATECH',
       title: 'Quantum X Pro',
-      image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=600',
+      image: X,
       price: '$1,099',
       originalPrice: '$1,199',
       discount: '-8%',
@@ -19,7 +22,7 @@ const ProductGridThreeColumn = () => {
       id: 2,
       brand: 'RAZERTECH',
       title: 'Blade 16 Ultra',
-      image: 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=600',
+      image: Blade,
       price: '$2,499',
       originalPrice: '$2,799',
       discount: '-11%',
@@ -32,7 +35,7 @@ const ProductGridThreeColumn = () => {
       id: 3,
       brand: 'AUDIOZEN',
       title: 'Soundscape Pro Max',
-      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600',
+      image: HeadPhone,
       price: '$449',
       originalPrice: '$549',
       discount: '-18%',

@@ -16,10 +16,10 @@ const Footer = () => {
     {
       title: 'Company',
       links: [
-        { label: 'About Us', href: '#about' },
-        { label: 'Contact', href: '#contact' },
+        { label: 'About Us', href: '/about' },
+        { label: 'Contact', href: '/contact' },
         { label: 'Careers', href: '#careers' },
-        { label: 'Press', href: '#press' },
+        { label: 'Press', href: '#press' }, 
       ],
     },
     {
