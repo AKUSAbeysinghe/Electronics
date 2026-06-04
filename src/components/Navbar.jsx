@@ -5,13 +5,14 @@ const Navbar = () => {
 
   const [isProductsOpen, setIsProductsOpen] = useState(false);
 
+  // Categories with dedicated paths
   const categories = [
-    "Smartphones",
-    "Laptops",
-    "Audio",
-    "TVs & Displays",
-    "Gaming",
-    "Wearables"
+    { name: "Smartphones", path: "/smartphones" },
+    { name: "Laptops", path: "/laptops" },
+    { name: "Audio", path: "/audio" },
+    { name: "TVs & Displays", path: "/tvs-displays" },
+    { name: "Gaming", path: "/gaming" },
+    { name: "Wearables", path: "/wearables" },
   ];
 
   return (
@@ -70,10 +71,10 @@ const Navbar = () => {
             {categories.map((category, index) => (
               <a
                 key={index}
-                href={`/products?category=${category.toLowerCase().replace(/\s+/g, '-')}`}
+                href={category.path}
                 className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-[#1a2338] transition-colors"
               >
-                {category}
+                {category.name}
               </a>
             ))}
           </div>

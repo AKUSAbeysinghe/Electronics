@@ -4,9 +4,9 @@ import React from "react";
 import Hero from "../Hero";
 import CategorySection from "../CategorySection";
 import FeaturedProducts from "../FeatureProducts";
-import HotDealsBanner from "./HotDealer";
-import ProductGridThreeColumn from "./ProductGrid";
-import FeaturesSection from "./FeatureSec";
+import HotDealsBanner from "../HotDealer";
+import ProductGridThreeColumn from "../ProductGrid";
+import FeaturesSection from "../FeatureSec";
 
 const Home = () => {
   return (

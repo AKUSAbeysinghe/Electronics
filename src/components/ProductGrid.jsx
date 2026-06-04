@@ -1,7 +1,7 @@
 import React from 'react';
-import X from "../../assets/Collections/BestSallers/X.jpg";
-import Blade from "../../assets/Collections/BestSallers/Blade.jpg";
-import HeadPhone from "../../assets/Collections/BestSallers/HeadPhone.jpg";
+import X from "../assets/Collections/BestSallers/X.jpg";
+import Blade from "../assets/Collections/BestSallers/Blade.jpg";
+import HeadPhone from "../assets/Collections/BestSallers/HeadPhone.jpg";
 
 const ProductGridThreeColumn = () => {
   const products = [

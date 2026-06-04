@@ -10,6 +10,13 @@ import TermsOfService from "./components/Pages/Terms.jsx";
 import FAQ from "./components/Pages/FAQ.jsx";
 import Contact from "./components/Pages/Contact.jsx";
 import About from "./components/about.jsx";
+import Press from "./components/Pages/Press.jsx";
+import Warenty from "./components/Pages/Warenty.jsx";
+
+ 
+import Laptops from "./components/Pages/Laptops.jsx";
+import Smartphone from "./components/Pages/SmartPhone.jsx";
+
 
 // ✅ Admin Pages
 import Login from "./Admin/Login.jsx";
@@ -60,6 +67,13 @@ function App() {
         <Route path="/FAQ" element={<Layout><FAQ /></Layout>} />
         <Route path="/About" element={<Layout><About /></Layout>} />
         <Route path="/contact" element={<Layout><Contact /></Layout>} />
+        <Route path="/press" element={<Layout><Press /></Layout>} />
+        <Route path="/warranty" element={<Layout><Warenty /></Layout>} />
+
+
+    
+        <Route path="/laptops" element={<Layout><Laptops /></Layout>} />
+        <Route path="/smartphones" element={<Layout><Smartphone /></Layout>} />
 
         {/* Admin Pages */}
         <Route path="/signup" element={<Layout><SignUp /></Layout>} />

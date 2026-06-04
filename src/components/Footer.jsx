@@ -19,7 +19,7 @@ const Footer = () => {
         { label: 'About Us', href: '/about' },
         { label: 'Contact', href: '/contact' },
         { label: 'Careers', href: '#careers' },
-        { label: 'Press', href: '#press' }, 
+        { label: 'Press', href: '/press' }, 
       ],
     },
     {
@@ -28,7 +28,7 @@ const Footer = () => {
         { label: 'Help Center', href: '#help' },
         { label: 'Returns', href: '#returns' },
         { label: 'Shipping', href: '#shipping' },
-        { label: 'Warranty', href: '#warranty' },
+        { label: 'Warranty', href: '/warranty' },
       ],
     },
   ];
