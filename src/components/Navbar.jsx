@@ -44,16 +44,13 @@ const Navbar = () => {
           Home
         </a>
 
-        {/* Products with Dropdown */}
+        {/* Products Dropdown (Text Only - No Link) */}
         <div 
           className="relative group"
           onMouseEnter={() => setIsProductsOpen(true)}
           onMouseLeave={() => setIsProductsOpen(false)}
         >
-          <a
-            href="/products"
-            className="text-gray-400 hover:text-[#4d61fc] transition-colors duration-300 flex items-center gap-1"
-          >
+          <span className="text-gray-400 hover:text-[#4d61fc] transition-colors duration-300 flex items-center gap-1 cursor-pointer">
             Products
             <svg 
               className="w-3 h-3 transition-transform group-hover:rotate-180" 
@@ -64,7 +61,7 @@ const Navbar = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
-          </a>
+          </span>
 
           {/* Dropdown Menu */}
           <div className={`absolute left-0 mt-3 w-56 bg-[#0a0f1c] border border-gray-800 rounded-2xl shadow-2xl py-3 transition-all duration-200 z-50 ${isProductsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
@@ -95,13 +92,13 @@ const Navbar = () => {
         </a>
       </div>
 
-      {/* Right: WhatsApp Icon */}
+      {/* Right: WhatsApp Icon - Now Blue Hover */}
       <div className="flex items-center">
         <a
           href={`https://wa.me/${whatsappNumber}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-[#25D366] transition-colors duration-300"
+          className="text-gray-400 hover:text-[#4d61fc] transition-colors duration-300"
           aria-label="Chat on WhatsApp"
         >
           <svg

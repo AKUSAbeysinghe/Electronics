@@ -6,11 +6,11 @@ const Footer = () => {
     {
       title: 'Shop',
       links: [
-        { label: 'Smartphones', href: '#smartphones' },
-        { label: 'Laptops', href: '#laptops' },
-        { label: 'Audio', href: '#audio' },
-        { label: 'Gaming', href: '#gaming' },
-        { label: 'Wearables', href: '#wearables' },
+        { label: 'Smartphones', href: '/smartphones' },
+        { label: 'Laptops', href: '/laptops' },
+        { label: 'Audio', href: '/audio' },
+        { label: 'Gaming', href: '/gaming' },
+        { label: 'Wearables', href: '/wearables' },
       ],
     },
     {
