@@ -41,7 +41,7 @@ const AdminPanel = () => {
 
   const fetchCategories = async () => {
     try {
-      const res = await fetch("http://localhost/electronics/api/get_categories.php");
+      const res = await fetch("http://localhost/electronics_store/api/get_categories.php");
       const data = await res.json();
 
       if (data.success) {
@@ -61,7 +61,7 @@ const AdminPanel = () => {
   const fetchSubCategories = async (categoryId) => {
     try {
       const res = await fetch(
-        `http://localhost/electronics/api/get_subcategories.php?category_id=${categoryId}`
+        `http://localhost/electronics_store/api/get_subcategories.php?category_id=${categoryId}`
       );
       const data = await res.json();
 
@@ -75,7 +75,7 @@ const AdminPanel = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch("http://localhost/electronics/api/get_products.php");
+      const res = await fetch("http://localhost/electronics_store/api/get_products.php");
       const data = await res.json();
 
       if (data.success) {
@@ -151,8 +151,8 @@ const AdminPanel = () => {
     }
 
     const url = isEditing
-      ? "http://localhost/electronics/api/update_product.php"
-      : "http://localhost/electronics/api/add_product.php";
+      ? "http://localhost/electronics_store/api/update_product.php"
+      : "http://localhost/electronics_store/api/add_product.php";
 
     try {
       const res = await fetch(url, {
@@ -212,7 +212,7 @@ const AdminPanel = () => {
   const handleDelete = async () => {
     try {
       const res = await fetch(
-        "http://localhost/electronics/api/delete_product.php",
+        "http://localhost/electronics_store/api/delete_product.php",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -287,7 +287,7 @@ const AdminPanel = () => {
                   <img
                     src={
                       p.image_url
-                        ? `http://localhost/electronics/${p.image_url}`
+                        ? `http://localhost/electronics_store/${p.image_url}`
                         : "https://via.placeholder.com/60"
                     }
                     className="w-12 h-12 rounded"
