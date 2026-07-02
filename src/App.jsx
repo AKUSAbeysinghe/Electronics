@@ -12,6 +12,7 @@ import Contact from "./components/Pages/Contact.jsx";
 import About from "./components/about.jsx";
 import Press from "./components/Pages/Press.jsx";
 import Warenty from "./components/Pages/Warenty.jsx";
+import Returns from "./components/Pages/Returns.jsx";
 
 import Laptops from "./components/Pages/Laptops.jsx";
 import Smartphone from "./components/Pages/SmartPhone.jsx";
@@ -30,6 +31,9 @@ import AdminPanel from "./Admin/AdminPanel.jsx";
 
 // ✅ Scroll
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import Careers from "./components/Pages/Careers.jsx";
+import Shipping from "./components/Pages/Shipping.jsx";
+import HelpCenter from "./components/Pages/HelpCenter.jsx";
 
 // ✅ Layout
 function Layout({ children }) {
@@ -152,6 +156,18 @@ function App() {
           }
         />
 
+
+      <Route
+          path="/shipping"
+          element={ 
+            <Layout>
+              <Shipping/>
+            </Layout>
+          }
+        />
+      
+
+
         {/* Product Pages */}
         <Route
           path="/laptops"
@@ -203,6 +219,37 @@ function App() {
           element={
             <Layout>
               <Wareables />
+            </Layout>
+          }
+        />
+
+
+
+        <Route
+          path="/careers"
+          element={
+            <Layout>
+              <Careers />
+            </Layout>
+          }
+        />
+
+
+
+      <Route
+          path="/returns"
+          element={
+            <Layout>
+              <Returns />
+            </Layout>
+          }
+        />
+
+      <Route
+          path="/help"
+          element={
+            <Layout>
+              <HelpCenter />
             </Layout>
           }
         />

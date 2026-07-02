@@ -1,146 +1,113 @@
-
 import React from 'react';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react';
 
-export default function Contact() {
+const Contact = () => {
   return (
-    <>
+    <div className="bg-black text-white min-h-screen">
+      
       {/* Header Section */}
-      <div className="bg-black text-center py-16 px-4">
+      <div className="bg-gradient-to-br from-[#0a0f1c] to-black py-24 px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-white text-4xl sm:text-5xl font-bold tracking-tight mb-4">
-            Get in Touch
-          </h2>
-          <p className="text-slate-400 text-base sm:text-lg font-normal tracking-wide">
-            Have a question? We would love to hear from you. Our team is ready to help.
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tighter mb-6">
+            Get in <span className="text-[#4d61fc]">Touch</span>
+          </h1>
+          <p className="text-gray-400 text-lg">
+            Have questions? Our team is ready to assist you.
           </p>
         </div>
       </div>
 
-      {/* Main Contact Section */}
-      <div className="bg-black min-h-screen flex items-center justify-center p-6 sm:p-12">
-        <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
-         
-          {/* Left Column: Contact Information */}
-          <div className="lg:col-span-1 bg-[#05070f] border border-slate-900 rounded-2xl p-8 flex flex-col gap-y-6">
-            <h3 className="text-white text-xl font-semibold mb-2">Contact Information</h3>
-           
-            {/* Email */}
-            <div className="flex items-start gap-4">
-              <div className="bg-[#0b132b] text-blue-500 p-3 rounded-xl flex items-center justify-center border border-slate-800">
-                <Mail className="w-5 h-5" />
+      {/* Contact Information */}
+      <div className="max-w-5xl mx-auto px-6 py-20">
+        <div className="grid md:grid-cols-2 gap-8">
+          
+          {/* Left - Main Contact Info */}
+          <div className="bg-[#0a0f1c] border border-gray-900 rounded-3xl p-10">
+            <h2 className="text-3xl font-bold mb-10">Contact Information</h2>
+            
+            <div className="space-y-8">
+              {/* Email */}
+              <div className="flex gap-5">
+                <div className="bg-[#1a2338] p-4 rounded-2xl text-[#4d61fc]">
+                  <Mail className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">EMAIL</p>
+                  <p className="text-white text-lg mt-1">support@volttech.com</p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-white font-medium text-sm">Email</h4>
-                <p className="text-slate-500 text-sm mt-0.5">support@volttech.com</p>
-              </div>
-            </div>
 
-            {/* Phone */}
-            <div className="flex items-start gap-4">
-              <div className="bg-[#0b132b] text-blue-500 p-3 rounded-xl flex items-center justify-center border border-slate-800">
-                <Phone className="w-5 h-5" />
+              {/* Phone */}
+              <div className="flex gap-5">
+                <div className="bg-[#1a2338] p-4 rounded-2xl text-[#4d61fc]">
+                  <Phone className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">PHONE / WHATSAPP</p>
+                  <p className="text-white text-lg mt-1">+94 77 123 4567</p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-white font-medium text-sm">Phone</h4>
-                <p className="text-slate-500 text-sm mt-0.5">+1 (555) 123-4567</p>
-              </div>
-            </div>
 
-            {/* Address */}
-            <div className="flex items-start gap-4">
-              <div className="bg-[#0b132b] text-blue-500 p-3 rounded-xl flex items-center justify-center border border-slate-800">
-                <MapPin className="w-5 h-5" />
+              {/* Address */}
+              <div className="flex gap-5">
+                <div className="bg-[#1a2338] p-4 rounded-2xl text-[#4d61fc]">
+                  <MapPin className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">HEAD OFFICE</p>
+                  <p className="text-white text-lg mt-1 leading-relaxed">
+                    123 Galle Road,<br />
+                    Colombo 04, Sri Lanka
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-white font-medium text-sm">Address</h4>
-                <p className="text-slate-500 text-sm mt-0.5 leading-relaxed">
-                  123 Tech Avenue, San Francisco, CA 94105
-                </p>
-              </div>
-            </div>
 
-            {/* Hours */}
-            <div className="flex items-start gap-4">
-              <div className="bg-[#0b132b] text-blue-500 p-3 rounded-xl flex items-center justify-center border border-slate-800">
-                <Clock className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="text-white font-medium text-sm">Hours</h4>
-                <p className="text-slate-500 text-sm mt-0.5">Mon - Fri: 9AM - 6PM PST</p>
+              {/* Working Hours */}
+              <div className="flex gap-5">
+                <div className="bg-[#1a2338] p-4 rounded-2xl text-[#4d61fc]">
+                  <Clock className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400">BUSINESS HOURS</p>
+                  <p className="text-white text-lg mt-1">Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Contact Form */}
-          <div className="lg:col-span-2 bg-[#05070f] border border-slate-900 rounded-2xl p-8 flex flex-col justify-between">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-             
-              {/* Name and Email Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="flex flex-col gap-2">
-                  <label className="text-white text-sm font-medium">Name</label>
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    className="bg-black border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-slate-700 transition"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-white text-sm font-medium">Email</label>
-                  <input
-                    type="email"
-                    placeholder="you@example.com"
-                    className="bg-black border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-slate-700 transition"
-                  />
-                </div>
+          {/* Right - Quick Actions */}
+          <div className="space-y-6">
+            <div className="bg-[#0a0f1c] border border-gray-900 rounded-3xl p-10 hover:border-[#4d61fc] transition-all">
+              <div className="flex items-center gap-4 mb-6">
+                <MessageCircle className="w-8 h-8 text-[#4d61fc]" />
+                <h3 className="text-2xl font-semibold">Chat with Us</h3>
               </div>
+              <p className="text-gray-400 mb-8">
+                Get instant support through WhatsApp. Our team usually replies within minutes.
+              </p>
+              <a
+                href="https://wa.me/94771234567"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-[#4d61fc] hover:bg-[#5a71ff] text-center py-4 rounded-2xl font-medium transition-all"
+              >
+                Message on WhatsApp
+              </a>
+            </div>
 
-              {/* Subject */}
-              <div className="flex flex-col gap-2">
-                <label className="text-white text-sm font-medium">Subject</label>
-                <div className="relative">
-                  <select
-                    className="w-full bg-black border border-slate-900 rounded-xl px-4 py-3 text-white text-sm appearance-none focus:outline-none focus:border-slate-700 transition cursor-pointer"
-                    defaultValue=""
-                  >
-                    <option value="" disabled hidden>Select a topic</option>
-                    <option value="support">Technical Support</option>
-                    <option value="sales">Sales</option>
-                    <option value="general">General Inquiry</option>
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-white">
-                    <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                    </svg>
-                  </div>
-                </div>
+            <div className="bg-[#0a0f1c] border border-gray-900 rounded-3xl p-10">
+              <h3 className="text-xl font-semibold mb-6">Other Ways to Reach Us</h3>
+              <div className="space-y-4 text-gray-400">
+                <p><strong className="text-white">Email:</strong> support@volttech.com</p>
+                <p><strong className="text-white">For Press:</strong> press@volttech.com</p>
+                <p><strong className="text-white">For Partnerships:</strong> partnerships@volttech.com</p>
               </div>
-
-              {/* Message */}
-              <div className="flex flex-col gap-2">
-                <label className="text-white text-sm font-medium">Message</label>
-                <textarea
-                  rows="5"
-                  placeholder="How can we help you?"
-                  className="bg-black border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-slate-700 transition resize-none"
-                ></textarea>
-              </div>
-
-              {/* Submit Button */}
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  className="bg-[#4f6ef7] hover:bg-[#415ed4] text-white font-medium px-6 py-3 rounded-xl flex items-center gap-2 text-sm transition-colors duration-200"
-                >
-                  <Send className="w-4 h-4 transform rotate-[-30deg] translate-y-[-1px]" />
-                  Send Message
-                </button>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default Contact;

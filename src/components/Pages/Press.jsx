@@ -5,26 +5,32 @@ const PressPage = () => {
     {
       id: 1,
       date: "June 02, 2026",
-      title: "NOVATECH Launches Quantum X Pro Series with Revolutionary AI Features",
-      excerpt: "Our flagship laptop series now comes with next-gen AI optimization and up to 32 hours of battery life.",
+      title: "VoltTech Launches Quantum X Pro Series with Revolutionary AI Features",
+      excerpt:
+        "Our flagship laptop series now comes with next-gen AI optimization and up to 32 hours of battery life.",
       category: "Product Launch",
-      image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600",
+      image:
+        "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=1200&auto=format&fit=crop&q=80",
     },
     {
       id: 2,
       date: "May 15, 2026",
       title: "TechCrunch Names Blade 16 Ultra as Best Gaming Laptop of 2026",
-      excerpt: "Our premium gaming laptop received outstanding reviews from leading technology publications.",
+      excerpt:
+        "Our premium gaming laptop received outstanding reviews from leading technology publications.",
       category: "Awards",
-      image: "https://images.unsplash.com/photo-1603302576837-37561b2e2308?w=600",
+      image:
+        "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=1200&auto=format&fit=crop&q=80",
     },
     {
       id: 3,
       date: "April 28, 2026",
       title: "Company Expands Global Presence with New Service Centers in Europe",
-      excerpt: "We are committed to providing faster support and service to our international customers.",
+      excerpt:
+        "We are committed to providing faster support and service to our international customers.",
       category: "Company News",
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600",
+      image:
+        "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&auto=format&fit=crop&q=80",
     },
   ];
 
@@ -47,7 +53,7 @@ const PressPage = () => {
             In The <span className="text-[#4d61fc]">Spotlight</span>
           </h1>
           <p className="text-gray-400 text-xl">
-            Latest news, announcements, and media coverage about NOVATECH
+            Latest news, announcements, and media coverage about VoltTech
           </p>
         </div>
       </section>
@@ -61,13 +67,22 @@ const PressPage = () => {
             {pressReleases.map((release) => (
               <div 
                 key={release.id}
-                className="bg-[#0a0f1c] border border-gray-900 rounded-3xl overflow-hidden hover:border-[#4d61fc]/40 transition-all group"
+                className="bg-[#0a0f1c] border border-gray-900 rounded-3xl overflow-hidden hover:border-[#4d61fc] transition-all group"
               >
-                <img 
-                  src={release.image} 
-                  alt={release.title}
-                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <div className="relative h-56 bg-[#1a2338] overflow-hidden">
+                  <img 
+                    src={release.image} 
+                    alt={release.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                      e.target.parentElement.innerHTML = `
+                        <div class="w-full h-full flex items-center justify-center text-6xl text-gray-700">📰</div>
+                      `;
+                    }}
+                  />
+                </div>
+                
                 <div className="p-8">
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-xs font-medium text-[#4d61fc] uppercase tracking-wider">
@@ -103,10 +118,10 @@ const PressPage = () => {
             {mediaMentions.map((mention, index) => (
               <div 
                 key={index}
-                className="bg-[#0a0f1c] border border-gray-900 p-10 rounded-3xl text-center hover:border-[#4d61fc]/30 transition-all"
+                className="bg-[#0a0f1c] border border-gray-900 p-10 rounded-3xl text-center hover:border-[#4d61fc] transition-all"
               >
-                <div className="text-3xl font-bold text-gray-500 mb-6">{mention.logo}</div>
-                <p className="italic text-gray-300 mb-6">“{mention.quote}”</p>
+                <div className="text-3xl font-bold text-gray-400 mb-6 tracking-wider">{mention.logo}</div>
+                <p className="italic text-gray-300 mb-6 text-lg">“{mention.quote}”</p>
                 <p className="text-xs text-gray-500">{mention.date}</p>
               </div>
             ))}
@@ -122,7 +137,7 @@ const PressPage = () => {
             Download our latest logos, product images, brand guidelines, and fact sheets.
           </p>
           
-          <button className="bg-white text-black px-10 py-4 rounded-2xl font-semibold hover:bg-gray-200 transition-all text-lg">
+          <button className="bg-[#4d61fc] hover:bg-[#5a71ff] text-white px-10 py-4 rounded-2xl font-semibold transition-all text-lg">
             Download Press Kit (PDF)
           </button>
         </div>
@@ -137,7 +152,7 @@ const PressPage = () => {
           </p>
           
           <div className="bg-[#0a0f1c] rounded-3xl p-10 inline-block">
-            <p className="text-[#4d61fc] font-medium mb-2">press@novatech.com</p>
+            <p className="text-[#4d61fc] font-medium mb-2">press@volttech.com</p>
             <p className="text-gray-400">Response time: Within 24 hours</p>
           </div>
         </div>

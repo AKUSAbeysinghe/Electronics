@@ -18,16 +18,16 @@ const Footer = () => {
       links: [
         { label: 'About Us', href: '/about' },
         { label: 'Contact', href: '/contact' },
-        { label: 'Careers', href: '#careers' },
+        { label: 'Careers', href: '/careers' },
         { label: 'Press', href: '/press' }, 
       ],
     },
     {
       title: 'Support',
       links: [
-        { label: 'Help Center', href: '#help' },
-        { label: 'Returns', href: '#returns' },
-        { label: 'Shipping', href: '#shipping' },
+        { label: 'Help Center', href: '/help' },
+        { label: 'Returns', href: '/returns' },
+        { label: 'Shipping', href: '/shipping' },
         { label: 'Warranty', href: '/warranty' },
       ],
     },

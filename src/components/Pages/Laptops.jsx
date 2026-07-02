@@ -1,168 +1,3 @@
-// import React from 'react';
-
-
-// const Laptops = () => {
-//   const laptops = [
-//     {
-//       id: 1,
-//       name: "Quantum X Pro",
-//       brand: "NOVATECH",
-//       price: "$1,099",
-//       originalPrice: "$1,199",
-//       discount: "-8%",
-//       image: "💻",
-//       rating: 4.8,
-//       reviews: "2,341",
-//       badge: "Best Seller"
-//     },
-//     {
-//       id: 2,
-//       name: "Blade 16 Ultra",
-//       brand: "RAZERTECH",
-//       price: "$2,499",
-//       originalPrice: "$2,799",
-//       discount: "-11%",
-//       image: "💻",
-//       rating: 4.9,
-//       reviews: "876",
-//       badge: "Gaming"
-//     },
-//     {
-//       id: 3,
-//       name: "AetherBook Pro",
-//       brand: "LUMEN",
-//       price: "$899",
-//       originalPrice: "$999",
-//       discount: "-10%",
-//       image: "💻",
-//       rating: 4.6,
-//       reviews: "1,543",
-//       badge: "New"
-//     },
-//     {
-//       id: 4,
-//       name: "Forge 14 Slim",
-//       brand: "NOVATECH",
-//       price: "$1,399",
-//       originalPrice: "$1,599",
-//       discount: "-13%",
-//       image: "💻",
-//       rating: 4.7,
-//       reviews: "2,098",
-//       badge: ""
-//     },
-//     {
-//       id: 5,
-//       name: "Velocity Z16",
-//       brand: "RAZERTECH",
-//       price: "$1,799",
-//       originalPrice: "$1,999",
-//       discount: "-10%",
-//       image: "💻",
-//       rating: 4.8,
-//       reviews: "654",
-//       badge: "Premium"
-//     },
-//     {
-//       id: 6,
-//       name: "NeoBook Air",
-//       brand: "LUMEN",
-//       price: "$649",
-//       originalPrice: "$749",
-//       discount: "-13%",
-//       image: "💻",
-//       rating: 4.5,
-//       reviews: "3,214",
-//       badge: ""
-//     },
-//   ];
-
-//   return (
-//     <>
-     
-
-//       {/* Page Header */}
-//       <section className="bg-black text-white pt-24 pb-12 px-6">
-//         <div className="max-w-7xl mx-auto text-center">
-//           <h1 className="text-5xl font-bold tracking-tight mb-4">Laptops</h1>
-//           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-//             Powerful laptops engineered for performance, creativity, and portability.
-//           </p>
-//         </div>
-//       </section>
-
-//       {/* Products Grid */}
-//       <section className="bg-black text-white pb-20 px-6">
-//         <div className="max-w-7xl mx-auto">
-//           <div className="flex justify-between items-center mb-10">
-//             <p className="text-gray-400">Showing 32 premium laptops</p>
-//             <select className="bg-[#0a0f1c] border border-gray-800 rounded-xl px-5 py-3 text-sm focus:outline-none focus:border-[#4d61fc]">
-//               <option>Sort by: Featured</option>
-//               <option>Price: Low to High</option>
-//               <option>Price: High to Low</option>
-//               <option>Best Rating</option>
-//               <option>Newest First</option>
-//             </select>
-//           </div>
-
-//           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-//             {laptops.map((laptop) => (
-//               <div
-//                 key={laptop.id}
-//                 className="group bg-[#0a0f1c] border border-gray-900 rounded-3xl overflow-hidden hover:border-[#4d61fc] transition-all duration-300 hover:-translate-y-2"
-//               >
-//                 {/* Image Area */}
-//                 <div className="relative h-72 bg-gradient-to-b from-[#1a2338] to-[#0a0f1c] flex items-center justify-center text-8xl transition-transform group-hover:scale-110">
-//                   {laptop.image}
-                  
-//                   {laptop.badge && (
-//                     <span className="absolute top-5 left-5 bg-[#4d61fc] text-white text-xs font-bold px-4 py-1.5 rounded-full">
-//                       {laptop.badge}
-//                     </span>
-//                   )}
-//                 </div>
-
-//                 {/* Content */}
-//                 <div className="p-6">
-//                   <div className="text-xs font-medium text-gray-500 mb-1">{laptop.brand}</div>
-//                   <h3 className="text-xl font-semibold mb-3 group-hover:text-[#4d61fc] transition-colors">
-//                     {laptop.name}
-//                   </h3>
-
-//                   {/* Rating */}
-//                   <div className="flex items-center gap-2 mb-4">
-//                     <div className="flex text-amber-400">
-//                       {[...Array(5)].map((_, i) => (
-//                         <span key={i}>★</span>
-//                       ))}
-//                     </div>
-//                     <span className="text-sm text-gray-400">({laptop.reviews})</span>
-//                   </div>
-
-//                   {/* Price */}
-//                   <div className="flex items-baseline gap-3">
-//                     <span className="text-3xl font-bold text-white">{laptop.price}</span>
-//                     <span className="text-gray-500 line-through text-lg">{laptop.originalPrice}</span>
-//                     <span className="text-emerald-400 text-sm font-medium">{laptop.discount}</span>
-//                   </div>
-
-//                   <button className="mt-6 w-full bg-[#4d61fc] hover:bg-[#5a71ff] py-3.5 rounded-2xl font-medium transition-all duration-300">
-//                     Add to Cart
-//                   </button>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-//     </>
-//   );
-// };
-
-// export default Laptops;
-
-
-
 import React, { useEffect, useState } from "react";
 
 const Laptops = () => {
@@ -172,15 +7,16 @@ const Laptops = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Subcategory IDs - Update these according to your database
+  const WHATSAPP_NUMBER = '94771234567'; // Same as Navbar
+
+  // Subcategory IDs
   const SUBCATEGORY_IDS = {
     ALL: "all",
-    GAMING: 1,
-    ULTRABOOKS: 2,
-    WORKSTATION: 3,
-    EVERYDAY: 4,
-    CONVERTIBLE: 5,
-    // Add more as per your admin panel
+    BusinessLaptops: 6, 
+    GAMING: 7,
+    EVERYDAY: 8,
+    creativeprofessionallaptops: 9,
+    CONVERTIBLE: 10,
   };
 
   const fetchLaptops = async () => {
@@ -192,7 +28,6 @@ const Laptops = () => {
       const data = await res.json();
 
       if (data.success && Array.isArray(data.data)) {
-        // Filter only Laptops (category_id = 2)
         const laptopItems = data.data.filter(
           item => Number(item.category_id) === 2
         );
@@ -213,7 +48,6 @@ const Laptops = () => {
     fetchLaptops();
   }, []);
 
-  // Filter when activeFilter changes
   useEffect(() => {
     if (activeFilter === "all") {
       setFilteredLaptops(allLaptops);
@@ -227,6 +61,18 @@ const Laptops = () => {
 
   const formatPrice = (price) => {
     return new Intl.NumberFormat("en-LK").format(price);
+  };
+
+  // WhatsApp Message Function
+  const handleWhatsAppClick = (product) => {
+    const message = `Hi! I'm interested in this product:\n\n` +
+                    `*${product.name}*\n` +
+                    `Brand: ${product.brand || 'Premium'}\n` +
+                    `Price: Rs. ${formatPrice(product.price)}\n\n` +
+                    `Please provide more details.`;
+
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -256,6 +102,15 @@ const Laptops = () => {
               </button>
 
               <button
+                onClick={() => setActiveFilter(SUBCATEGORY_IDS.BusinessLaptops)}
+                className={`px-5 py-2.5 rounded-full transition-all ${
+                  activeFilter === SUBCATEGORY_IDS.BusinessLaptops ? "bg-[#4d61fc] text-white" : "bg-[#0a0f1c] text-gray-400 hover:text-white"
+                }`}
+              >
+                Business Laptops
+              </button>
+
+              <button
                 onClick={() => setActiveFilter(SUBCATEGORY_IDS.GAMING)}
                 className={`px-5 py-2.5 rounded-full transition-all ${
                   activeFilter === SUBCATEGORY_IDS.GAMING ? "bg-[#4d61fc] text-white" : "bg-[#0a0f1c] text-gray-400 hover:text-white"
@@ -265,30 +120,21 @@ const Laptops = () => {
               </button>
 
               <button
-                onClick={() => setActiveFilter(SUBCATEGORY_IDS.ULTRABOOKS)}
-                className={`px-5 py-2.5 rounded-full transition-all ${
-                  activeFilter === SUBCATEGORY_IDS.ULTRABOOKS ? "bg-[#4d61fc] text-white" : "bg-[#0a0f1c] text-gray-400 hover:text-white"
-                }`}
-              >
-                Ultrabooks
-              </button>
-
-              <button
-                onClick={() => setActiveFilter(SUBCATEGORY_IDS.WORKSTATION)}
-                className={`px-5 py-2.5 rounded-full transition-all ${
-                  activeFilter === SUBCATEGORY_IDS.WORKSTATION ? "bg-[#4d61fc] text-white" : "bg-[#0a0f1c] text-gray-400 hover:text-white"
-                }`}
-              >
-                Workstations
-              </button>
-
-              <button
                 onClick={() => setActiveFilter(SUBCATEGORY_IDS.EVERYDAY)}
                 className={`px-5 py-2.5 rounded-full transition-all ${
                   activeFilter === SUBCATEGORY_IDS.EVERYDAY ? "bg-[#4d61fc] text-white" : "bg-[#0a0f1c] text-gray-400 hover:text-white"
                 }`}
               >
-                Everyday
+                Student & Everyday Laptops
+              </button>
+
+              <button
+                onClick={() => setActiveFilter(SUBCATEGORY_IDS.creativeprofessionallaptops)}
+                className={`px-5 py-2.5 rounded-full transition-all ${
+                  activeFilter === SUBCATEGORY_IDS.creativeprofessionallaptops ? "bg-[#4d61fc] text-white" : "bg-[#0a0f1c] text-gray-400 hover:text-white"
+                }`}
+              >
+                Creative & Professional Laptops
               </button>
 
               <button
@@ -404,8 +250,15 @@ const Laptops = () => {
                         )}
                       </div>
 
-                      <button className="mt-6 w-full bg-[#4d61fc] hover:bg-[#5a71ff] py-3.5 rounded-2xl font-medium transition-all duration-300">
-                        Add to Cart
+                      {/* WhatsApp Button */}
+                      <button
+                        onClick={() => handleWhatsAppClick(laptop)}
+                        className="mt-6 w-full bg-[#4d61fc] hover:bg-[#5a71ff] py-3.5 rounded-2xl font-medium transition-all duration-300 flex items-center justify-center gap-2"
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.76-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.612-.917-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        </svg>
+                        Chat on WhatsApp
                       </button>
                     </div>
                   </div>
